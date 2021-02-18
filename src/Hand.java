@@ -118,6 +118,7 @@ public class Hand {
 			this.score += card.getScore();
 			this.hand.add(card);
 		}
+		this.checkAce();
 	}
 
 	public void hit() {
