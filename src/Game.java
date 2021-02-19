@@ -98,12 +98,12 @@ public class Game {
 			player.payout(false);
 			player.printBalance();
 		}
-		else if (pScore > dScore || pSplitScore > dScore) {
+		else if (dScore != 1 && (pScore > dScore || pSplitScore > dScore)) {
 			System.out.println("YOU WON!");
 			player.payout(false);
 			player.printBalance();
 		}
-		else if (dScore == 1 && pScore != 1 && pSplitScore != 1) {
+		else if (dScore == 1 && !(pScore == 1 || pSplitScore == 1)) {
 			System.out.println("HOUSE WINS!");
 			player.printBalance();
 		}
@@ -124,6 +124,11 @@ public class Game {
 				player.tie();
 				player.printBalance();
 			}
+		}
+		else if (pSplitScore == dScore) {
+			System.out.println("TIE");
+			player.tie();
+			player.printBalance();
 		}
 	}
 
