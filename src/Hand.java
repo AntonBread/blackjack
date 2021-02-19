@@ -99,6 +99,7 @@ public class Hand {
 	// Initial game method
 	public void deal() {
 		this.hand.clear();
+		this.splitHand.clear();
 		this.score = 0;
 		this.splitScore = 0;
 		if (this.balance != -1) {
