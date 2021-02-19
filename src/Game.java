@@ -91,7 +91,7 @@ public class Game {
 		int pSplitScore = 0;
 		if (player.getSplitHand().size() > 0)
 			pSplitScore = player.checkScoreSplit();
-		int dScore = dealer.getScore();
+		int dScore = dealer.checkScore();
 		
 		if ((pScore == 1 || pSplitScore == 1) && dScore != 1) {
 			System.out.println("YOU WON!");
